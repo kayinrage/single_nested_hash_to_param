@@ -1,0 +1,21 @@
+====== ====== ==== == =====
+SINGLE NESTED HASH TO PARAM
+====== ====== ==== == =====
+
+This plugin extend hash class with single_nested_hash_to_param method.
+It works like to_param but for single-neste hash like for example
+{:person=>{:name=>"Irek", :surname=>"Skrobis", :profession=>"Developer"}}
+
+Installation:
+=============
+ruby script/plugin install git@github.com/kayinrage/single_nested_hash_to_param.git
+
+Examples:
+=========
+hsh = {:person=>{:name=>"Irek", :surname=>"Skrobis", :profession=>"Developer"}}
+hsh.single_nested_hash_to_param
+=> "?person[name]=Irek&person[surname]=Skrobis&person[profession]=Developer"
+
+
+
+Copyright (c) 2010 Irenuesz Skrobis, released under the MIT license
